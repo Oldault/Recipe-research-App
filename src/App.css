@@ -9,6 +9,7 @@
 
 .search-form {
     margin-top: 26px;
+    margin-bottom: 40px;
 }
 
 .search-bar {
@@ -35,4 +36,5 @@
 
 .results {
     display: flex;
+    flex-wrap: wrap;
 }

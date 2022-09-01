@@ -22,6 +22,7 @@ function App() {
     );
     const data = await response.json();
     setRecipes(data.hits);
+    console.log(data.hits);
   };
 
   const updateSearch = (e) => {
@@ -34,14 +35,20 @@ function App() {
     setSearch("");
   };
 
+  const [elementNum, setElementNum] = useState(8);
+  const loadMore = () => {
+    setElementNum(elementNum + 8);
+  };
+
+  const RecipesSlice = recipes.slice(0, elementNum);
+
   return (
     <div className="App">
       <Header />
       <div className="under-header">
         <Choose />
         <div className="research-section">
-          <form onSubmit={getSearch} className="search-form" >
-
+          <form onSubmit={getSearch} className="search-form">
             <input
               className="search-bar"
               type="text"
@@ -54,12 +61,14 @@ function App() {
             </button>
           </form>
           <div className="results">
-            {recipes.map((recipe, key) => (
+            {RecipesSlice.map((recipe, key) => (
               <Recipe
                 key={key}
                 title={recipe.recipe.label}
                 calories={recipe.recipe.calories}
                 image={recipe.recipe.image}
+                cuisineType={recipe.recipe.cuisineType}
+                url={recipe.recipe.url}
               />
             ))}
           </div>

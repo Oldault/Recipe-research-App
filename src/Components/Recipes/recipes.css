@@ -3,27 +3,57 @@
 }
 
 .box {
-  border: 1px solid #dddddd;
   width: 300px;
   height: 300px;
   border-radius: 24px;
   position: relative;
   display: flex;
+  margin: 0px 40px 40px 0px;
+  box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
 }
 
 .box img {
   border-radius: 24px;
+  align-self: flex-end;
 }
 
-.text {
+.main-info {
   float: left;
   position: absolute;
   left: 0px;
-  top: 80px;
+  bottom: 0px;
   z-index: 1;
   background-color: hsla(75, 5%, 16%, 0.774);
-  padding: 5px;
+  padding: 6px 10px;
   color: #ffffff;
   font-weight: bold;
-  /* margin: 30px; */
+  margin: 8px;
+  border-radius: 24px;
+  width: 264px;
+}
+
+.title {
+  width: 100%;
+}
+
+.cuisineType {
+  float: right;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  text-transform: capitalize;
+  margin: 8px;
+  padding: 4px 8px;
+  border-radius: 20px;
+  background: #fdc830; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to top,
+    hsla(20, 89%, 58%, 0.8),
+    hsla(44, 98%, 59%, 0.8)
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to top,
+    hsla(20, 89%, 58%, 0.7),
+    hsla(44, 98%, 59%, 0.7)
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }
