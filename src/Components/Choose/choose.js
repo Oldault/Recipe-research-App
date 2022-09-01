@@ -4,6 +4,7 @@ import Button from "@mui/material/Button";
 import { createTheme, ThemeProvider } from "@mui/material/styles";
 import Icon from "@mui/material/Icon";
 import Box from "@mui/material/Box";
+import { MyLocation } from "@mui/icons-material";
 
 const theme = createTheme({
   basic: {
@@ -31,10 +32,6 @@ const theme = createTheme({
 });
 
 const Choose = () => {
-  const myfunction = () => {
-    console.log("CLICKED");
-  };
-
   const imgStyle = {
     position: "absolute",
     top: "4px",
@@ -101,6 +98,7 @@ const Choose = () => {
               className="button"
               startIcon={saladIcon}
               sx={btnStyle}
+              
             >
               Salad
             </Button>
