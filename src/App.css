@@ -6,3 +6,33 @@
 .under-header {
     display: flex;
 }
+
+.search-form {
+    margin-top: 26px;
+}
+
+.search-bar {
+    height: 24px;
+    width: 400px;
+    border-radius: 24px;
+    border: none;
+    background-color: lightgray;
+    padding: 4px 18px;
+}
+
+.search-button {
+    height: 32px;
+    width: 64px;
+    border-radius: 24px;
+    border: none;
+    background-color: #F37535;
+    margin-left: 8px;
+}
+
+.research-section {
+    width: 100%;
+}
+
+.results {
+    display: flex;
+}

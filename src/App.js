@@ -40,10 +40,12 @@ function App() {
       <div className="under-header">
         <Choose />
         <div className="research-section">
-          <form onSubmit={getSearch} className="search-form">
+          <form onSubmit={getSearch} className="search-form" >
+
             <input
               className="search-bar"
               type="text"
+              placeholder="Search for Recipes and more..."
               value={search}
               onChange={updateSearch}
             />
