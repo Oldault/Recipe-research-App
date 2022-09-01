@@ -1,6 +1,8 @@
 import "./App.css";
+import Header from "./Components/Header/header";
 import React, { useEffect, useState } from "react";
 import Recipe from "./Components/Recipes/recipes";
+import Choose from "./Components/Choose/choose";
 
 function App() {
   const APP_ID = "1b89f587";
@@ -26,31 +28,41 @@ function App() {
     setSearch(e.target.value);
   };
 
-  const getSearch = e => {
+  const getSearch = (e) => {
     e.preventDefault();
     setQuery(search);
-    setSearch("")
-  }
+    setSearch("");
+  };
 
   return (
     <div className="App">
-      <form onSubmit={getSearch} className="search-form">
-        <input
-          className="search-bar"
-          type="text"
-          value={search}
-          onChange={updateSearch}
-        />
-        <button className="search-button" type="submit">Search</button>
-      </form>
-      {recipes.map((recipe, key) => (
-        <Recipe
-          key={key}
-          title={recipe.recipe.label}
-          calories={recipe.recipe.calories}
-          image={recipe.recipe.image}
-        />
-      ))}
+      <Header />
+      <div className="under-header">
+        <Choose />
+        <div className="research-section">
+          <form onSubmit={getSearch} className="search-form">
+            <input
+              className="search-bar"
+              type="text"
+              value={search}
+              onChange={updateSearch}
+            />
+            <button className="search-button" type="submit">
+              Search
+            </button>
+          </form>
+          <div className="results">
+            {recipes.map((recipe, key) => (
+              <Recipe
+                key={key}
+                title={recipe.recipe.label}
+                calories={recipe.recipe.calories}
+                image={recipe.recipe.image}
+              />
+            ))}
+          </div>
+        </div>
+      </div>
     </div>
   );
 }

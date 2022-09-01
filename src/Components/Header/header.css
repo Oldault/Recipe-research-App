@@ -1,0 +1,126 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.header {
+  background: #fdc830; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to top,
+    #f37335,
+    #fdc830
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to top,
+    #f37335,
+    #fdc830
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+  margin: 8px;
+  padding: 42px 58px;
+  height: 500px;
+  border-radius: 32px;
+
+}
+
+h1,
+h2 {
+  font-family: "Oswald", sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+li {
+  list-style: none;
+  font-family: "Josefin Sans", sans-serif;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-left {
+  display: flex;
+}
+
+.logo {
+  margin-right: 40px;
+  display: flex;
+  align-self: center;
+  margin-bottom: 18px;
+}
+
+.navigation {
+  display: flex;
+  align-self: center;
+}
+
+.navigation ol {
+  display: flex;
+}
+
+.navigation li,
+.login-button {
+  color: black;
+  margin: 0px 16px;
+  --s: 0.15em;
+  --c: black;
+
+  color: black;
+  padding-bottom: var(--s);
+  background: linear-gradient(90deg, var(--c) 50%, #000 0)
+      calc(50% - var(--_p, 0%)) / 0.1% 100%,
+    linear-gradient(var(--c) 0 0) 0% 100% / var(--_p, 0%) var(--s) no-repeat;
+  -webkit-background-clip: text, padding-box;
+  background-clip: text, padding-box;
+  transition: 0.5s ease;
+}
+
+.navigation li:hover {
+  color: black;
+  --_p: 100%;
+}
+
+.sign-up-button {
+  color: black;
+  background-color: white;
+  padding: 12px 16px;
+  border-radius: 32px;
+  border: none;
+}
+
+.login-button {
+  margin: 0px 16px;
+  border: none;
+}
+
+.main {
+    display: flex;
+}
+
+.main .svg {
+    width: 200px;
+    display: flex;
+    align-items: flex-end;
+}
+
+.main img {
+    overflow: hidden;
+    width: 100%;
+    height: auto;
+}
+
+.main-header {
+  font-size: 70px;
+  margin-top: 80px;
+  line-height: 150%;
+}
+
+.h2-space {
+  padding-left: 110px;
+}
